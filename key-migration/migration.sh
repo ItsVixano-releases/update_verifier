@@ -91,7 +91,8 @@ else
 fi
 
 if [ $USE_ABX ]; then
-    xml2abx $MODIFICATION_TARGET $PACKAGES
+    xml2abx $MODIFICATION_TARGET $PACKAGES.tmp
+    mv $PACKAGES.tmp $PACKAGES
 fi
 
 chmod 660 $PACKAGES
